@@ -33,6 +33,7 @@ public class UserServiceImplTest {
                 userService.getFirstNamesReverseSorted(asList(user1, user2, user3));
 
         assertThat(sortedFirstNames).containsExactly("John", "Greg", "Alex");
+
     }
 
     @Test
