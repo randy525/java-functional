@@ -8,15 +8,15 @@ import java.util.List;
 
 public class User {
 
-    private Long id;
+    private final Long id;
 
-    private String firstName;
+    private final String firstName;
 
-    private String lastName;
+    private final String lastName;
 
-    private Integer age;
+    private final Integer age;
 
-    private List<Privilege> privileges;
+    private final List<Privilege> privileges;
 
     public User(final Long id,
                 final String firstName,

@@ -3,8 +3,6 @@ package com.endava.internship.service;
 
 import com.endava.internship.domain.Privilege;
 import com.endava.internship.domain.User;
-import com.endava.internship.service.UserService;
-import com.endava.internship.service.UserServiceImpl;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -21,7 +19,7 @@ import static org.assertj.core.api.Assertions.entry;
 @SuppressWarnings("unchecked")
 public class UserServiceImplTest {
 
-    private UserService userService = new UserServiceImpl();
+    private final UserService userService = new UserServiceImpl();
 
     private static final List<Privilege> ALL_PRIVILEGES = asList(Privilege.values());
 
@@ -35,6 +33,7 @@ public class UserServiceImplTest {
                 userService.getFirstNamesReverseSorted(asList(user1, user2, user3));
 
         assertThat(sortedFirstNames).containsExactly("John", "Greg", "Alex");
+
     }
 
     @Test
